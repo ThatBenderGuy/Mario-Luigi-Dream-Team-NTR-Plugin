@@ -18,6 +18,11 @@ The subtraction works funky with HP or BP so be careful that you don't make it g
 Download:
 https://mega.nz/#!285xmK6R!3bRO2uKXKJAXNHdj0iO6WCRxiwY4sYAZ4Ve2vDWCXOw
 
+Planned features:
+- The ability to set your own value for the stat modifier through an item (more than likely mushroom)
+- Infinite health that doesn't modify your current HP to an arbitrary number
+- 99 of all items (simple but requires a lot of code)
+
 Credits:
 - NTR CFW by cell9 and companions
 - Godson for addresses to stats.
