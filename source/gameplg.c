@@ -138,9 +138,8 @@ void increaseStat(u32 eAddr, u32 ueAddr, u32 value){
 
 // freeze the value
 void freezeCheatValue() {
-	if(cheatEnabled[0]) { // Set coins to 999,999
-		WRITEU32(0x006E85EC, 0x000F423F);
-	}
+    //Set coins to 999,999
+	if(cheatEnabled[0]) WRITEU32(0x006E85EC, 0x000F423F);
 
 }
 
