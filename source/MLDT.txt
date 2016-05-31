@@ -1,0 +1,53 @@
+Mario & Luigi - Dream Team (USA) 
+Downloaded From Fort42: GateShark Credits and instructions: http://www.fort42.com/gateshark/game477/ 
+---------------------------------------------------- 
+[Max EXP] 
+106E8448 0000F23F 
+206E844B 00000063 
+106E844C 0000F23F 
+106E8530 0000F23F 
+206E8533 00000063 
+106E8534 0000F23F 
+
+[Max HP] 
+006E842E 000003C8 - Mario Unequipped
+106E841E 000003E7 - Mario Equipped
+106E8422 000003E7 - Mario Equipped 
+006E8516 000003C1 - Luigi Unequipped 
+106E8506 000003E7 - Luigi Equipped 
+106E850A 000003E7 - Luigi Equipped  
+
+[Max BP] 
+006E8432 000003DB - Mario Unequipped 
+106E8420 000003E7 - Mario Equipped 
+106E8424 000003E7 - Mario Equipped 
+006E851A 000003DE - Luigi Unequipped  
+106E8508 000003E7 - Luigi Equipped 
+106E850C 000003E7 - Luigi Equipped 
+
+[Max POW] 
+006E8436 000003CD - Mario Unequipped 
+106E8426 000003E7 - Mario Equipped 
+006E851E 000003D2 - Luigi Unequipped  
+106E850E 000003E7 - Luigi Equipped 
+
+[Max DEF] 
+006E843A 000003D6 - Mario Unequipped 
+106E8428 000003E7 - Mario Equipped 
+006E8522 000003D2 - Luigi Unequipped  
+106E8510 000003E7 - Luigi Equipped 
+
+[Max SPEED] 
+006E843E 000003D1 - Mario Unequipped 
+106E842A 000003E7 - Mario Equipped 
+006E8526 000003DA - Luigi Unequipped  
+106E8512 000003E7 - Luigi Equipped 
+
+[Max STACHE] 
+006E8442 000003D3 - Mario Unequipped 
+106E842C 000003E7 - Mario Equipped 
+006E852A 000003C9 - Luigi Unequipped  
+106E8514 000003E7 - Luigi Equipped 
+
+[999,999 Coins] 
+006E85EC 000F423F 

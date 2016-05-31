@@ -1,7 +1,7 @@
 # Mario-Luigi-Dream-Team-NTR-Plugin
 Mario & Luigi Dream Team (USA) cheat plugin for NTR CFW
 
-This was tested on BootNTR.cia (NTR 2.4), with an O3DS XL, Luma CFW 11.0 SysNAND, Mario and Luigi Dream Team cia version with no patches installed (may with the patch installed but I haven't tested it). This plugin was based off of Godson's addresses from Fort42 for Gateway.
+This was tested on BootNTR.cia (NTR 2.4), with an O3DS XL, Luma CFW 11.0 SysNAND, Mario and Luigi Dream Team cia version with no patches installed (This may work with the patch installed but I haven't tested it). This plugin was based off of Godson's addresses from Fort42 for Gateway.
 
 Features:
 Press R+UP/Down:
@@ -21,4 +21,3 @@ https://mega.nz/#!285xmK6R!3bRO2uKXKJAXNHdj0iO6WCRxiwY4sYAZ4Ve2vDWCXOw
 Credits:
 - NTR CFW by cell9 and companions
 - Godson for addresses to stats.
-
