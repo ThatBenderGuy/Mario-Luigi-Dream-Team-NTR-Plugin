@@ -113,15 +113,15 @@ void addCheatMenuEntry(u8* str) {
 // this function will be called when the state of cheat item changed
 void onCheatItemChanged(int id, int enable) {
 	// TODO: handle on cheat item is select or unselected
+	if(id == 2 && enable == 1) charUsing = 0;
+	if(id == 3 && enable == 1) charUsing = 1;
+
 	if(id == 4 && enable == 1) statUsing = 0;
 	if(id == 5 && enable == 1) statUsing = 1;
 	if(id == 6 && enable == 1) statUsing = 2;
 	if(id == 7 && enable == 1) statUsing = 3;
 	if(id == 8 && enable == 1) statUsing = 4;
 	if(id == 9 && enable == 1) statUsing = 5;
-
-	if(id == 2 && enable == 1) charUsing = 0;
-	if(id == 3 && enable == 1) charUsing = 1;
 
 	if(id == 10 && enable == 1) incrementValue = 0x01;
 	if(id == 11 && enable == 1) incrementValue = 0x05;
