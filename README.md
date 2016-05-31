@@ -16,7 +16,7 @@ Note:
 The subtraction works funky with HP or BP so be careful that you don't make it go below 0.
 
 Download:
-Go to releases to download the plugin
+https://github.com/ThatBenderGuy/Mario-Luigi-Dream-Team-NTR-Plugin/releases
 
 Planned features:
 - The ability to set your own value for the stat modifier through an item (more than likely mushroom)
