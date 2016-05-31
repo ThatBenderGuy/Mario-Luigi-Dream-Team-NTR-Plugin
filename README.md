@@ -16,7 +16,7 @@ Note:
 The subtraction works funky with HP or BP so be careful that you don't make it go below 0.
 
 Download:
-https://mega.nz/#!285xmK6R!3bRO2uKXKJAXNHdj0iO6WCRxiwY4sYAZ4Ve2vDWCXOw
+Go to releases to download the plugin
 
 Planned features:
 - The ability to set your own value for the stat modifier through an item (more than likely mushroom)
