@@ -113,19 +113,19 @@ void addCheatMenuEntry(u8* str) {
 // this function will be called when the state of cheat item changed
 void onCheatItemChanged(int id, int enable) {
 	// TODO: handle on cheat item is select or unselected
-	if(id == 2 && enable == 1) charUsing = 0;
-	if(id == 3 && enable == 1) charUsing = 1;
+	if(id == 2 && enable == 1) charUsing = 0; // Sets the character stat to modify to mario
+	if(id == 3 && enable == 1) charUsing = 1; // Sets the character stat to modify to luigi
 
-	if(id == 4 && enable == 1) statUsing = 0;
-	if(id == 5 && enable == 1) statUsing = 1;
-	if(id == 6 && enable == 1) statUsing = 2;
-	if(id == 7 && enable == 1) statUsing = 3;
-	if(id == 8 && enable == 1) statUsing = 4;
-	if(id == 9 && enable == 1) statUsing = 5;
+	if(id == 4 && enable == 1) statUsing = 0; //HP
+	if(id == 5 && enable == 1) statUsing = 1; //BP
+	if(id == 6 && enable == 1) statUsing = 2; //POW
+	if(id == 7 && enable == 1) statUsing = 3; //DEF
+	if(id == 8 && enable == 1) statUsing = 4; //SPEED
+	if(id == 9 && enable == 1) statUsing = 5; //STACHE
 
-	if(id == 10 && enable == 1) incrementValue = 0x01;
-	if(id == 11 && enable == 1) incrementValue = 0x05;
-	if(id == 12 && enable == 1) incrementValue = 0x0A;
+	if(id == 10 && enable == 1) incrementValue = 0x01; //Set the increment value to 1
+	if(id == 11 && enable == 1) incrementValue = 0x05; //Set the increment value to 5
+	if(id == 12 && enable == 1) incrementValue = 0x0A; //Set the increment value to 10
 }
 
 // Used to increase a stat value by the last parameter
@@ -139,7 +139,7 @@ void increaseStat(u32 eAddr, u32 ueAddr, u32 value){
 // freeze the value
 void freezeCheatValue() {
     //Set coins to 999,999
-	if(cheatEnabled[0]) WRITEU32(0x006E85EC, 0x000F423F);
+	if(cheatEnabled[0]) WRITEU32(0x006E85EC, 0x000F423F); // Simple coin cheat
 
 }
 
