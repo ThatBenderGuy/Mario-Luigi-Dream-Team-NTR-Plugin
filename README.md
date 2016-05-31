@@ -5,8 +5,8 @@ This was tested on BootNTR.cia (NTR 2.4), with an O3DS XL, Luma CFW 11.0 SysNAND
 
 Features:
 Press R+UP/Down:
--Will add/subtract 1, 5, or 10 (configurable from cheat menu) to a specific stat (configurable from cheat menu) to either Mario or Luigi (also configurable via cheat menu)
--999,999 coins cheat in cheat menu.
+- Will add/subtract 1, 5, or 10 (configurable from cheat menu) to a specific stat (configurable from cheat menu) to either Mario or Luigi (also configurable via cheat menu)
+- 999,999 coins cheat in cheat menu.
 
 
 Usage:
