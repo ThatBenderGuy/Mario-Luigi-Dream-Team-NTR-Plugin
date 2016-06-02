@@ -1,29 +1,30 @@
 Mario & Luigi - Dream Team (USA) 
 Downloaded From Fort42: GateShark Credits and instructions: http://www.fort42.com/gateshark/game477/ 
 ---------------------------------------------------- 
-[Max EXP] 
-106E8448 0000F23F 
-206E844B 00000063 
-106E844C 0000F23F 
-106E8530 0000F23F 
-206E8533 00000063 
-106E8534 0000F23F 
+[Max EXP] Current Values: Mario - Lv9 - 2023 current EXP - Need 307 more (Need 2,330 total)
+                          Luigi - Lv9 - 2112 current EXP - Need 323 more (Need 2,435 total)
+106E8448 0000F23F - Mario Total EXP
+206E844B 00000063 - Mario Level
+106E844C 0000F23F - Mario Needed EXP
+106E8530 0000F23F - Luigi Total EXP
+206E8533 00000063 - Luigi Level
+106E8534 0000F23F - Luigi Needed EXP
 
-[Max HP] 
-006E842E 000003C8 - Mario Unequipped
-106E841E 000003E7 - Mario Equipped
-106E8422 000003E7 - Mario Equipped 
-006E8516 000003C1 - Luigi Unequipped 
-106E8506 000003E7 - Luigi Equipped 
-106E850A 000003E7 - Luigi Equipped  
+[Max HP] Max = 03E7 (Unequipped? = 03C8)
+006E842E 000003C8 - Mario Unequipped? - (Unknown)
+106E841E 000003E7 - Mario Equipped - Current (Out of combat)
+106E8422 000003E7 - Mario Equipped - Max
+006E8516 000003C1 - Luigi Unequipped? - (Unknown)
+106E8506 000003E7 - Luigi Equipped - Current (Out of combat)
+106E850A 000003E7 - Luigi Equipped - Max
 
 [Max BP] 
-006E8432 000003DB - Mario Unequipped 
-106E8420 000003E7 - Mario Equipped 
-106E8424 000003E7 - Mario Equipped 
-006E851A 000003DE - Luigi Unequipped  
-106E8508 000003E7 - Luigi Equipped 
-106E850C 000003E7 - Luigi Equipped 
+006E8432 000003DB - Mario Unequipped? - (Unknown)
+106E8420 000003E7 - Mario Equipped - Current (Out of combat)
+106E8424 000003E7 - Mario Equipped - Max
+006E851A 000003DE - Luigi Unequipped? - (Unknown)
+106E8508 000003E7 - Luigi Equipped - Current (Out of combat)
+106E850C 000003E7 - Luigi Equipped - Max
 
 [Max POW] 
 006E8436 000003CD - Mario Unequipped 
@@ -51,3 +52,9 @@ Downloaded From Fort42: GateShark Credits and instructions: http://www.fort42.co
 
 [999,999 Coins] 
 006E85EC 000F423F 
+
+======Personal Research=======
+Mario's in battle HP - 1485B4D8 (85B4D8 in HxD)
+Mario's in battle BP - 1485B4DC (85B4DC in HxD)
+Luigi's in battle HP - 1485C0A4 (85C0A4 in HxD)
+Luigi's in battle HP - 1485C0A8 (85C0A8 in HxD)
