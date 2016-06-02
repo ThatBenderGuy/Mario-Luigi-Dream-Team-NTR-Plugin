@@ -113,19 +113,19 @@ void addCheatMenuEntry(u8* str) {
 // this function will be called when the state of cheat item changed
 void onCheatItemChanged(int id, int enable) {
 	// TODO: handle on cheat item is select or unselected
-	if(id == 2 && enable == 1) charUsing = 0; // Sets the character stat to modify to mario
-	if(id == 3 && enable == 1) charUsing = 1; // Sets the character stat to modify to luigi
+	if(id == 4 && enable == 1) charUsing = 0; // Sets the character stat to modify to mario
+	if(id == 5 && enable == 1) charUsing = 1; // Sets the character stat to modify to luigi
 
-	if(id == 4 && enable == 1) statUsing = 0; //HP
-	if(id == 5 && enable == 1) statUsing = 1; //BP
-	if(id == 6 && enable == 1) statUsing = 2; //POW
-	if(id == 7 && enable == 1) statUsing = 3; //DEF
-	if(id == 8 && enable == 1) statUsing = 4; //SPEED
-	if(id == 9 && enable == 1) statUsing = 5; //STACHE
+	if(id == 6 && enable == 1) statUsing = 0; //HP
+	if(id == 7 && enable == 1) statUsing = 1; //BP
+	if(id == 8 && enable == 1) statUsing = 2; //POW
+	if(id == 9 && enable == 1) statUsing = 3; //DEF
+	if(id == 10 && enable == 1) statUsing = 4; //SPEED
+	if(id == 11 && enable == 1) statUsing = 5; //STACHE
 
-	if(id == 10 && enable == 1) incrementValue = 0x01; //Set the increment value to 1
-	if(id == 11 && enable == 1) incrementValue = 0x05; //Set the increment value to 5
-	if(id == 12 && enable == 1) incrementValue = 0x0A; //Set the increment value to 10
+	if(id == 12 && enable == 1) incrementValue = 0x01; //Set the increment value to 1
+	if(id == 13 && enable == 1) incrementValue = 0x05; //Set the increment value to 5
+	if(id == 14 && enable == 1) incrementValue = 0x0A; //Set the increment value to 10
 }
 
 // Used to increase a stat value by the last parameter
@@ -140,6 +140,21 @@ void increaseStat(u32 eAddr, u32 ueAddr, u32 value){
 void freezeCheatValue() {
     //Set coins to 999,999
 	if(cheatEnabled[0]) WRITEU32(0x006E85EC, 0x000F423F); // Simple coin cheat
+
+	if(cheatEnabled[1]) // Infinite HP/BP Mario
+    {
+        u16 marioMaxHP = READU16(0x006E8422); // Get Mario's max HP
+        u16 marioMaxBP = READU16(0x006E8424); // Get Mario's max BP
+        WRITEU16(0x1485B4D8, marioMaxHP); // Set Mario's current HP to max
+        WRITEU16(0x1485B4DC, marioMaxBP); // Set Mario's current BP to max
+	}
+	if(cheatEnabled[2]) // Infinite HP/BP Luigi
+    {
+        u16 luigiMaxHP = READU16(0x006E850A); // Get Luigi's max HP
+        u16 luigiMaxBP = READU16(0x006E850C); // Get Luigi's max BP
+        WRITEU16(0x1485C0A4, luigiMaxHP); // Set Luigi's current HP to max
+        WRITEU16(0x1485C0A8, luigiMaxBP); // Set Luigi's current BP to max
+	}
 
 }
 
@@ -162,18 +177,20 @@ void scanCheatMenu() {
 void initCheatMenu() {
 	initMenu();
 	addCheatMenuEntry("999,999 Coins");
+	addCheatMenuEntry("Infinite HP/BP (Mario)");
+	addCheatMenuEntry("Infinite HP/BP (Luigi)");
 	addCheatMenuEntry("-----Stat Modifiers----");
-	addCheatMenuEntry("R+UP/DN (Mario)");
-	addCheatMenuEntry("R+UP/DN (Luigi)");
+	addCheatMenuEntry("Stat modifier: Mario");
+	addCheatMenuEntry("Stat modifier: Luigi");
 	addCheatMenuEntry("R+UP/DN - HP");
 	addCheatMenuEntry("R+UP/DN - BP");
 	addCheatMenuEntry("R+UP/DN - POW");
 	addCheatMenuEntry("R+UP/DN - DEF");
 	addCheatMenuEntry("R+UP/DN - SPEED");
 	addCheatMenuEntry("R+UP/DN - STACHE");
-	addCheatMenuEntry("R+UP/DN - Value 1");
-	addCheatMenuEntry("R+UP/DN - Value 5");
-	addCheatMenuEntry("R+UP/DN - Value 10");
+	addCheatMenuEntry("Stat amount - Value 1");
+	addCheatMenuEntry("Stat amount - Value 5");
+	addCheatMenuEntry("Stat amount - Value 10");
 	updateMenu();
 }
 
@@ -201,11 +218,11 @@ void gamePluginEntry() {
 
 		key = getKey();
 		switch(key){
-            case BUTTON_R + BUTTON_DU:
+            case BUTTON_R + BUTTON_DU: //R+UP
                 increaseIndvStat(charUsing, statUsing, incrementValue);
                 waitKeyUp();
             break;
-            case BUTTON_R + BUTTON_DD:
+            case BUTTON_R + BUTTON_DD: //R+DOWN
                 decreaseIndvStat(charUsing, statUsing, incrementValue);
             break;
 		}
@@ -213,6 +230,7 @@ void gamePluginEntry() {
 	}
 }
 
+// Inputs: int for which character to use, int for which specific stat to increase, and a u16 (hex) to determine the increment amount
 void increaseIndvStat(int charU, int statU, u16 increment)
 {
 
@@ -258,6 +276,7 @@ void increaseIndvStat(int charU, int statU, u16 increment)
     }
 }
 
+// Inputs: int for which character to use, int for which specific stat to increase, and a u16 (hex) to determine the decrement amount
 void decreaseIndvStat(int charU, int statU, u16 increment)
 {
 
