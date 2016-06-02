@@ -13,7 +13,7 @@ Press R+UP/Down:
 Copy the file cheat.plg to /plugin/00040000000D5A00/ in  sd/microsd card, boot to NTR and press R+UP to increase the stat or R+DOWN to decrease the stat. Please make sure that when using the cheat menu to configure the stats that only mario or luigi are selected between those two, only 1 stat is selected, and that only one value modifier (+1, +5, +10) is selected. The default values are set to (Mario | HP | 1)
 
 ##### Note:
-The subtraction works funky with HP or BP so be careful that you don't make it go below 0.
+The subtraction works funky with HP or BP so be careful that you don't make them go below 0.
 
 ##### Download:
 https://github.com/ThatBenderGuy/Mario-Luigi-Dream-Team-NTR-Plugin/releases
@@ -26,3 +26,4 @@ https://github.com/ThatBenderGuy/Mario-Luigi-Dream-Team-NTR-Plugin/releases
 ##### Credits:
 - NTR CFW by cell9 and companions
 - Godson for addresses to stats.
+- imthe666st from reddit for a lot of help on C 
